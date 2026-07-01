@@ -73,8 +73,8 @@
   bottom: 0.8em; /* Shift dot closer to the stem top */
   left: 58%; /* Shifted slightly right to center over Poppins stem */
   transform: translateX(-50%);
-  width: 0.2em;
-  height: 0.2em;
+  width: 0.15em;
+  height: 0.15em;
   background-color: var(--orange);
   border-radius: 0; /* square dot */
 }
