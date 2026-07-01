@@ -71,7 +71,7 @@
   content: "";
   position: absolute;
   bottom: 0.8em; /* Shift dot closer to the stem top */
-  left: 50%;
+  left: 58%; /* Shifted slightly right to center over Poppins stem */
   transform: translateX(-50%);
   width: 0.2em;
   height: 0.2em;
