@@ -70,7 +70,7 @@
 .nav__logo-i::after {
   content: "";
   position: absolute;
-  bottom: 0.30em; /* Shift dot closer to the stem top */
+  bottom: 0.7em; /* Shift dot closer to the stem top */
   left: 50%;
   transform: translateX(-50%);
   width: 0.2em;
