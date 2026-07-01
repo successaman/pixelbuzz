@@ -54,8 +54,8 @@
 }
 .nav__logo-text {
   font-size: 1.8rem;
-  font-weight: 800; /* Extra Bold */
-  letter-spacing: -0.03em;
+  font-weight: 700; /* Bold (less bold than 800) */
+  letter-spacing: -0.02em;
   color: var(--logo-primary);
   line-height: 1;
   display: inline-block;
@@ -70,11 +70,11 @@
 .nav__logo-i::after {
   content: "";
   position: absolute;
-  top: 0.12em; /* position above dotless i stem */
+  bottom: calc(100% + 0.08em); /* Position dot above the stem to avoid collapse */
   left: 50%;
   transform: translateX(-50%);
-  width: 0.22em;
-  height: 0.22em;
+  width: 0.2em;
+  height: 0.2em;
   background-color: var(--orange);
   border-radius: 0; /* square dot */
 }
