@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    PIXELBUZZ — Components
    Reusable UI elements
    ============================================================ */
@@ -40,10 +40,72 @@
   display: flex; align-items: center; justify-content: space-between; height: 72px;
   max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--space-xl);
 }
-.nav__logo { display: flex; align-items: baseline; font-size: 1.5rem; font-weight: var(--fw-extrabold); letter-spacing: var(--ls-tight); text-decoration: none; flex-shrink: 0; }
-.nav__logo:hover { color: inherit; }
-.nav__logo-primary { color: var(--logo-primary); }
-.nav__logo-orange { color: var(--logo-orange); }
+.nav__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-decoration: none;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.nav__logo:hover {
+  opacity: 0.9;
+}
+.nav__logo-text {
+  font-size: 1.8rem;
+  font-weight: 800; /* Extra Bold */
+  letter-spacing: -0.03em;
+  color: var(--logo-primary);
+  line-height: 1;
+  display: inline-block;
+  font-family: var(--font-family);
+}
+.nav__logo-i {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  line-height: 1;
+}
+.nav__logo-i::after {
+  content: "";
+  position: absolute;
+  top: 0.12em; /* position above dotless i stem */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.22em;
+  height: 0.22em;
+  background-color: var(--orange);
+  border-radius: 0; /* square dot */
+}
+.nav__logo-accent {
+  color: var(--orange);
+}
+.nav__logo-tagline {
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  margin-top: 4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  display: block;
+  line-height: 1;
+  font-family: var(--font-family);
+}
+.nav__logo-tagline span {
+  color: var(--orange);
+  margin: 0 4px;
+  font-weight: 500;
+}
+
+/* Footer Specific Logo Styles */
+.footer__brand .nav__logo-text {
+  color: #F5F5F5;
+}
+.footer__brand .nav__logo-tagline {
+  color: #888888;
+}
 .nav__links { display: flex; align-items: center; gap: var(--space-lg); }
 .nav__link { font-size: var(--fs-small); font-weight: var(--fw-medium); color: var(--text-secondary); text-decoration: none; transition: color var(--transition-fast); position: relative; white-space: nowrap; }
 .nav__link:hover, .nav__link--active { color: var(--text-primary); }
