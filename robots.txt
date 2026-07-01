@@ -1,0 +1,5 @@
+﻿User-agent: *
+Allow: /
+Disallow: /thank-you.html
+
+Sitemap: https://pixelbuzz.in/sitemap.xml
