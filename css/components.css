@@ -75,7 +75,7 @@
 .nav__theme-toggle svg { width: 20px; height: 20px; }
 .nav__cta { padding: 10px 24px; }
 .nav__menu-toggle { display: none; width: 40px; height: 40px; align-items: center; justify-content: center; background: none; border: none; cursor: pointer; position: relative; }
-.nav__menu-toggle span { display: block; width: 22px; height: 2px; background: var(--text-primary); transition: all var(--transition-fast); position: absolute; }
+.nav__menu-toggle span { display: block; width: 22px; height: 2px; background: var(--text-primary); transition: all var(--transition-fast); position: absolute; left: calc(50% - 11px); top: calc(50% - 1px); }
 .nav__menu-toggle span:nth-child(1) { transform: translateY(-7px); }
 .nav__menu-toggle span:nth-child(2) { transform: translateY(0); }
 .nav__menu-toggle span:nth-child(3) { transform: translateY(7px); }
@@ -289,6 +289,9 @@
 @media (max-width: 768px) {
   .sticky-actions {
     right: 16px;
+    top: auto;
+    bottom: 16px;
+    transform: none;
     gap: 12px;
   }
   .sticky-action {
