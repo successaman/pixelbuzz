@@ -10,10 +10,15 @@
   const menuToggle = document.querySelector('.nav__menu-toggle');
   const navLinks = document.querySelector('.nav__links');
 
+  const navContainer = document.querySelector('.nav');
+
   if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', function() {
       this.classList.toggle('active');
       navLinks.classList.toggle('active');
+      if (navContainer) {
+        navContainer.classList.toggle('nav--open');
+      }
       document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
     });
 
@@ -22,6 +27,9 @@
       link.addEventListener('click', function() {
         menuToggle.classList.remove('active');
         navLinks.classList.remove('active');
+        if (navContainer) {
+          navContainer.classList.remove('nav--open');
+        }
         document.body.style.overflow = '';
       });
     });

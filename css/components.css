@@ -32,7 +32,7 @@
 
 /* --- Navigation --- */
 .nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-sticky);
+  position: fixed; top: 0; left: 0; right: 0; z-index: 10000 !important;
   background: var(--nav-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
   box-shadow: var(--nav-shadow); transition: all var(--transition-base);
 }
