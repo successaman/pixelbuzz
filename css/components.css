@@ -289,9 +289,6 @@
 @media (max-width: 768px) {
   .sticky-actions {
     right: 16px;
-    top: auto;
-    bottom: 16px;
-    transform: none;
     gap: 12px;
   }
   .sticky-action {
