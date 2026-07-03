@@ -223,3 +223,66 @@
 .contact-link:hover {
   color: var(--orange);
 }
+
+/* --- Floating Sticky Actions --- */
+.sticky-actions {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 9999; /* Always on top */
+}
+
+.sticky-action {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.sticky-action svg {
+  width: 28px;
+  height: 28px;
+}
+
+.sticky-action--whatsapp {
+  background-color: #25D366;
+}
+.sticky-action--whatsapp:hover {
+  background-color: #20BA5A;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+}
+
+.sticky-action--instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.sticky-action--instagram:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(214, 36, 159, 0.35);
+}
+
+@media (max-width: 768px) {
+  .sticky-actions {
+    right: 16px;
+    bottom: 16px;
+    gap: 12px;
+  }
+  .sticky-action {
+    width: 48px;
+    height: 48px;
+  }
+  .sticky-action svg {
+    width: 24px;
+    height: 24px;
+  }
+}
