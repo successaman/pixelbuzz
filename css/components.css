@@ -52,59 +52,17 @@
 .nav__logo:hover {
   opacity: 0.9;
 }
-.nav__logo-text {
-  font-size: 1.8rem;
-  font-weight: 700; /* Bold (less bold than 800) */
-  letter-spacing: -0.02em;
-  color: var(--logo-primary);
-  line-height: 1;
-  display: inline-block;
-  font-family: var(--font-family);
-}
-.nav__logo-i {
-  position: relative;
-  display: inline-block;
-  color: inherit;
-  line-height: 1;
-}
-.nav__logo-i::after {
-  content: "";
-  position: absolute;
-  bottom: 0.8em; /* Shift dot closer to the stem top */
-  left: 55%; /* Centered perfectly over Poppins stem */
-  transform: translateX(-50%);
-  width: 0.17em;
-  height: 0.17em;
-  background-color: var(--orange);
-  border-radius: 0; /* square dot */
-}
-.nav__logo-accent {
-  color: var(--orange);
-}
-.nav__logo-tagline {
-  font-size: 0.55rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  color: var(--text-muted);
-  margin-top: 4px;
-  text-transform: uppercase;
-  white-space: nowrap;
+.nav__logo-img {
+  height: 40px; /* Perfectly balances vertical height and matches original layout dimensions */
+  width: auto;
   display: block;
-  line-height: 1;
-  font-family: var(--font-family);
+  transition: opacity 0.2s ease;
 }
-.nav__logo-tagline span {
-  color: var(--orange);
-  margin: 0 4px;
-  font-weight: 500;
+[data-theme="dark"] .nav__logo-img {
+  filter: invert(1) hue-rotate(180deg);
 }
-
-/* Footer Specific Logo Styles */
-.footer__brand .nav__logo-text {
-  color: #F5F5F5;
-}
-.footer__brand .nav__logo-tagline {
-  color: #888888;
+.footer__brand .nav__logo-img {
+  filter: invert(1) hue-rotate(180deg);
 }
 .nav__links { display: flex; align-items: center; gap: var(--space-lg); }
 .nav__link { font-size: var(--fs-small); font-weight: var(--fw-medium); color: var(--text-secondary); text-decoration: none; transition: color var(--transition-fast); position: relative; white-space: nowrap; }
